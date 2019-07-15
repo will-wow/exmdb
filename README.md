@@ -2,19 +2,25 @@
 
 An Elixir IMDB Scraper, for an ElixirLA talk.
 
+## Mix Tasks
+
+To get a list of an actor's most common co-stars:
+
+```bash
+time mix best_friends "Chris Evans" 4
+```
+
+To more quickly get a list of an actor's most common co-stars:
+
+```bash
+time mix best_friends "Chris Evans" 4 async
+```
+
+## Phoenix
+
 To start your Phoenix server:
 
-  * Install dependencies with `mix deps.get`
-  * Start Phoenix endpoint with `mix phx.server`
+- Install dependencies with `mix deps.get`
+- Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
