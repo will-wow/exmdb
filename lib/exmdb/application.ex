@@ -1,4 +1,4 @@
-defmodule Shmoogle.Application do
+defmodule Exmdb.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -9,21 +9,21 @@ defmodule Shmoogle.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      ShmoogleWeb.Endpoint
-      # Starts a worker by calling: Shmoogle.Worker.start_link(arg)
-      # {Shmoogle.Worker, arg},
+      ExmdbWeb.Endpoint
+      # Starts a worker by calling: Exmdb.Worker.start_link(arg)
+      # {Exmdb.Worker, arg},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Shmoogle.Supervisor]
+    opts = [strategy: :one_for_one, name: Exmdb.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    ShmoogleWeb.Endpoint.config_change(changed, removed)
+    ExmdbWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

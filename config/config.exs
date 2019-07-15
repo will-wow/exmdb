@@ -8,11 +8,11 @@
 use Mix.Config
 
 # Configures the endpoint
-config :shmoogle, ShmoogleWeb.Endpoint,
+config :exmdb, ExmdbWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "7mOwAcAhTv62w5azObId5gTaX0VmNlhh7WRG8I/2EqwTtBChw4uVdw+TDkccwMRE",
-  render_errors: [view: ShmoogleWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: Shmoogle.PubSub, adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: ExmdbWeb.ErrorView, accepts: ~w(json)],
+  pubsub: [name: Exmdb.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,

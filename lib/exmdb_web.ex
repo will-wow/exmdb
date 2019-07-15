@@ -1,12 +1,12 @@
-defmodule ShmoogleWeb do
+defmodule ExmdbWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use ShmoogleWeb, :controller
-      use ShmoogleWeb, :view
+      use ExmdbWeb, :controller
+      use ExmdbWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,26 +19,26 @@ defmodule ShmoogleWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: ShmoogleWeb
+      use Phoenix.Controller, namespace: ExmdbWeb
 
       import Plug.Conn
-      import ShmoogleWeb.Gettext
-      alias ShmoogleWeb.Router.Helpers, as: Routes
+      import ExmdbWeb.Gettext
+      alias ExmdbWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/shmoogle_web/templates",
-        namespace: ShmoogleWeb
+        root: "lib/exmdb_web/templates",
+        namespace: ExmdbWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
 
-      import ShmoogleWeb.ErrorHelpers
-      import ShmoogleWeb.Gettext
-      alias ShmoogleWeb.Router.Helpers, as: Routes
+      import ExmdbWeb.ErrorHelpers
+      import ExmdbWeb.Gettext
+      alias ExmdbWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -53,7 +53,7 @@ defmodule ShmoogleWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import ShmoogleWeb.Gettext
+      import ExmdbWeb.Gettext
     end
   end
 

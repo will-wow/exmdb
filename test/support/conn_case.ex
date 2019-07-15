@@ -1,4 +1,4 @@
-defmodule ShmoogleWeb.ConnCase do
+defmodule ExmdbWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -19,10 +19,10 @@ defmodule ShmoogleWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      alias ShmoogleWeb.Router.Helpers, as: Routes
+      alias ExmdbWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint ShmoogleWeb.Endpoint
+      @endpoint ExmdbWeb.Endpoint
     end
   end
 

@@ -1,9 +1,9 @@
-defmodule Shmoogle.MixProject do
+defmodule Exmdb.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :shmoogle,
+      app: :exmdb,
       version: "0.1.0",
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -18,7 +18,7 @@ defmodule Shmoogle.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Shmoogle.Application, []},
+      mod: {Exmdb.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -40,7 +40,9 @@ defmodule Shmoogle.MixProject do
 
       {:httpoison, "~> 1.4"},
       {:floki, "~> 0.21.0"},
-      {:dialyxir, "~> 1.0.0-rc.6", only: [:dev], runtime: false}
+
+      {:dialyxir, "~> 1.0.0-rc.6", only: [:dev], runtime: false},
+      {:mox, "~> 0.5", only: :test}
     ]
   end
 end

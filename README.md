@@ -1,4 +1,6 @@
-# Shmoogle
+# ExMDB
+
+An Elixir IMDB Scraper, for an ElixirLA talk.
 
 To start your Phoenix server:
 

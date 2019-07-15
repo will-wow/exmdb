@@ -1,7 +1,7 @@
-defmodule ShmoogleWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :shmoogle
+defmodule ExmdbWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :exmdb
 
-  socket "/socket", ShmoogleWeb.UserSocket,
+  socket "/socket", ExmdbWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -11,7 +11,7 @@ defmodule ShmoogleWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :shmoogle,
+    from: :exmdb,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -37,8 +37,8 @@ defmodule ShmoogleWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_shmoogle_key",
+    key: "_exmdb_key",
     signing_salt: "5ZXAwtVh"
 
-  plug ShmoogleWeb.Router
+  plug ExmdbWeb.Router
 end

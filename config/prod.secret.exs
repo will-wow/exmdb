@@ -11,7 +11,7 @@ secret_key_base =
     You can generate one by calling: mix phx.gen.secret
     """
 
-config :shmoogle, ShmoogleWeb.Endpoint,
+config :exmdb, ExmdbWeb.Endpoint,
   http: [:inet6, port: String.to_integer(System.get_env("PORT") || "4000")],
   secret_key_base: secret_key_base
 
@@ -20,7 +20,7 @@ config :shmoogle, ShmoogleWeb.Endpoint,
 # If you are doing OTP releases, you need to instruct Phoenix
 # to start each relevant endpoint:
 #
-#     config :shmoogle, ShmoogleWeb.Endpoint, server: true
+#     config :exmdb, ExmdbWeb.Endpoint, server: true
 #
 # Then you can assemble a release by calling `mix release`.
 # See `mix help release` for more information.

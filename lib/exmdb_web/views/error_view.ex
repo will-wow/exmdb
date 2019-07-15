@@ -1,5 +1,5 @@
-defmodule ShmoogleWeb.ErrorView do
-  use ShmoogleWeb, :view
+defmodule ExmdbWeb.ErrorView do
+  use ExmdbWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.
