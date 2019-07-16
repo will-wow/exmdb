@@ -8,6 +8,6 @@ defmodule ExmdbWeb.Router do
   scope "/api", ExmdbWeb do
     pipe_through :api
 
-    get "/search", SearchController, :index
+    get "/best_friends", BestFriendController, :index
   end
 end

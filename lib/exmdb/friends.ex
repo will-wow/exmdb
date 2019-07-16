@@ -20,7 +20,7 @@ defmodule Exmdb.Friends do
 
   def aggregate_friends(names, main_name) do
     names
-    |> Enum.reject(fn name -> name === main_name end)
+    |> Enum.reject(fn name -> String.downcase(name) === String.downcase(main_name) end)
     |> Enum.group_by(fn x -> x end)
     |> Enum.map(fn {name, names} -> {name, length(names)} end)
     |> Enum.sort_by(fn {_, count} -> count end, &>=/2)

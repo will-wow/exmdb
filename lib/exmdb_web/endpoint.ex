@@ -40,5 +40,7 @@ defmodule ExmdbWeb.Endpoint do
     key: "_exmdb_key",
     signing_salt: "5ZXAwtVh"
 
+  plug CORSPlug, origin: "*"
+
   plug ExmdbWeb.Router
 end

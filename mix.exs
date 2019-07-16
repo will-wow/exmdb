@@ -41,6 +41,8 @@ defmodule Exmdb.MixProject do
       {:httpoison, "~> 1.4"},
       {:floki, "~> 0.21.0"},
 
+      {:cors_plug, "~> 2.0"},
+
       {:dialyxir, "~> 1.0.0-rc.6", only: [:dev], runtime: false},
       {:mox, "~> 0.5", only: :test}
     ]
