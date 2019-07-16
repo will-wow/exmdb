@@ -1,6 +1,8 @@
 # ExMDB
 
-An Elixir IMDB Scraper, for an ElixirLA talk.
+An Elixir IMDB Scraper, for an [ElixirLA talk](https://www.meetup.com/Elixir-LA/events/pqcwlpyzkbwb/).
+
+Deck: [floki-talk.surge.sh](https://floki-talk.surge.sh)
 
 ## Mix Tasks
 
